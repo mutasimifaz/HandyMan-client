@@ -1,6 +1,6 @@
 # Live Site
-[Live Site](https://elite-toolboxes.web.app/)
-[Server Code](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-Ummaygaliva)
+[Live Site](https://handyman-repairs.web.app/)
+[Server Code](https://github.com/mutasimifaz/HandyMan-server)
 
 ### `MERN stack project`
 
