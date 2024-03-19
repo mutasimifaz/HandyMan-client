@@ -13,7 +13,7 @@ const stripePromise = loadStripe(
 const Payment = () => {
   const { id } = useParams();
   const { data: order, isLoading } = useQuery("order", () =>
-    fetch(`https://handyman-server-production.up.railway.app/order/${id}`, {
+    fetch(`https://handyman-server.onrender.com/order/${id}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },

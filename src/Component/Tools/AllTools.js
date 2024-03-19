@@ -8,7 +8,7 @@ const AllTools = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://handyman-server-production.up.railway.app/tool", {
+    fetch("https://handyman-server.onrender.com/tool", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },

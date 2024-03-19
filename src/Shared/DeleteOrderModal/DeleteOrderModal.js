@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const DeleteOrderModal = ({ deletingOrder, refetch, setDeletingOrder }) => {
   const { _id, name } = deletingOrder;
   const handleDelete = () => {
-    const url = `https://handyman-server-production.up.railway.app/orders/${_id}`;
+    const url = `https://handyman-server.onrender.com/orders/${_id}`;
     fetch(url, {
       method: "DELETE",
       headers: {

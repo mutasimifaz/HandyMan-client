@@ -14,7 +14,7 @@ const Purchase = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   useEffect(() => {
-    fetch(`https://handyman-server-production.up.railway.app/tool/${id}`, {
+    fetch(`https://handyman-server.onrender.com/tool/${id}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
@@ -46,7 +46,7 @@ const Purchase = () => {
       tool_name: tool.name,
       status: "pending",
     };
-    fetch("https://handyman-server-production.up.railway.app/order", {
+    fetch("https://handyman-server.onrender.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",

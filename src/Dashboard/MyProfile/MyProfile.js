@@ -14,9 +14,7 @@ const MyProfile = () => {
   const { navigate } = useNavigate();
 
   useEffect(() => {
-    fetch(
-      `https://handyman-server-production.up.railway.app/user/${user?.email}`
-    )
+    fetch(`https://handyman-server.onrender.com/user/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyData(data);
@@ -72,17 +70,14 @@ const MyProfile = () => {
           toast.success("Updated user successfully");
           reset();
           // send to your database
-          fetch(
-            `https://handyman-server-production.up.railway.app/user/${user?.email}`,
-            {
-              method: "PUT",
-              headers: {
-                "content-type": "application/json",
-                authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-              },
-              body: JSON.stringify(theUser),
-            }
-          )
+          fetch(`https://handyman-server.onrender.com/user/${user?.email}`, {
+            method: "PUT",
+            headers: {
+              "content-type": "application/json",
+              authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            },
+            body: JSON.stringify(theUser),
+          })
             .then((res) => res.json())
             .then((data) => {
               if (data.insertedId) {

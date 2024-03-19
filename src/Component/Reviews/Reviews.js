@@ -10,7 +10,7 @@ const Reviews = ({ toolId, reviewDone }) => {
 
   // useLayoutEffect(() => {
   //   setIsLoading(true);
-  //   fetch(`https://handyman-server-production.up.railway.app/reviews/${toolId}?currentPage=0&limit=100`)
+  //   fetch(`https://handyman-server.onrender.com/reviews/${toolId}?currentPage=0&limit=100`)
   //     .then((res) => res.json())
   //     .then((data) => {
   //       console.log(data)
@@ -31,7 +31,7 @@ const Reviews = ({ toolId, reviewDone }) => {
     refetch,
   } = useQuery("reviews", () =>
     fetch(
-      `https://handyman-server-production.up.railway.app/reviews/${toolId}?currentPage=0&limit=100`,
+      `https://handyman-server.onrender.com/reviews/${toolId}?currentPage=0&limit=100`,
       {
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

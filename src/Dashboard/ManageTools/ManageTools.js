@@ -11,7 +11,7 @@ const ManageTools = () => {
     isLoading,
     refetch,
   } = useQuery("tools", () =>
-    fetch("https://handyman-server-production.up.railway.app/tool", {
+    fetch("https://handyman-server.onrender.com/tool", {
       headers: {
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

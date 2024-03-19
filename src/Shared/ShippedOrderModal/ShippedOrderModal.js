@@ -11,7 +11,7 @@ const ShippedOrderModal = ({
   const { _id, name } = shippingOrder;
   console.log(shippingOrder);
   const handleShipped = () => {
-    fetch(`https://handyman-server-production.up.railway.app/order/${_id}`, {
+    fetch(`https://handyman-server.onrender.com/order/${_id}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -12,7 +12,7 @@ const AllOrders = () => {
     isLoading,
     refetch,
   } = useQuery("orders", () =>
-    fetch("https://handyman-server-production.up.railway.app/orders", {
+    fetch("https://handyman-server.onrender.com/orders", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },

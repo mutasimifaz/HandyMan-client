@@ -4,15 +4,12 @@ import { toast } from "react-toastify";
 const AllUserRow = ({ user, refetch, myEmail, setDeletingUser }) => {
   const { email, role } = user;
   const makeAdmin = () => {
-    fetch(
-      `https://handyman-server-production.up.railway.app/user/admin/${email}`,
-      {
-        method: "PUT",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      }
-    )
+    fetch(`https://handyman-server.onrender.com/user/admin/${email}`, {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
       .then((res) => {
         if (res.status === 403) {
           toast.error(`You are not an admin. You can't do that`);
@@ -27,15 +24,12 @@ const AllUserRow = ({ user, refetch, myEmail, setDeletingUser }) => {
       });
   };
   const makeUser = () => {
-    fetch(
-      `https://handyman-server-production.up.railway.app/users/admin/${email}`,
-      {
-        method: "PUT",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      }
-    )
+    fetch(`https://handyman-server.onrender.com/users/admin/${email}`, {
+      method: "PUT",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
       .then((res) => {
         if (res.status === 403) {
           toast.error(`You are not an admin. You can't do that`);

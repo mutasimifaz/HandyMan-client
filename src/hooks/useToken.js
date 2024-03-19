@@ -11,7 +11,7 @@ const useToken = (user) => {
       photo: photo,
     };
     if (email) {
-      fetch(`https://handyman-server-production.up.railway.app/user/${email}`, {
+      fetch(`https://handyman-server.onrender.com/user/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

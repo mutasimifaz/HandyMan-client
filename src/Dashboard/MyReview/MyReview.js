@@ -24,7 +24,7 @@ const MyReview = () => {
       rating: String(rates),
     };
     // send to your database
-    fetch("https://handyman-server-production.up.railway.app/reviews", {
+    fetch("https://handyman-server.onrender.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

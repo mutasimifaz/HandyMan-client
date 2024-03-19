@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const DeleteUserModal = ({ deletingUser, setDeletingUser, refetch }) => {
   const { user_name, _id, email } = deletingUser;
   const handleDeleteUser = () => {
-    const url = `https://handyman-server-production.up.railway.app/user/${_id}`;
+    const url = `https://handyman-server.onrender.com/user/${_id}`;
     fetch(url, {
       method: "DELETE",
       headers: {

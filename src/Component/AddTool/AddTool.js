@@ -35,7 +35,7 @@ const AddTool = () => {
           toast.success("Tool added successfully");
           reset();
           // send to your database
-          fetch("https://handyman-server-production.up.railway.app/tool", {
+          fetch("https://handyman-server.onrender.com/tool", {
             method: "POST",
             headers: {
               "content-type": "application/json",

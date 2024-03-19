@@ -19,7 +19,7 @@ const ProductReviews = ({ toolId }) => {
 
   const handleReview = (e) => {
     e.preventDefault();
-    fetch("https://handyman-server-production.up.railway.app/reviews", {
+    fetch("https://handyman-server.onrender.com/reviews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
